@@ -11,7 +11,7 @@ const createCity=async function(req,res){
             return res.status(300).send({code:"300",msg:"city name does not contain numeric character"})
         }   
         let finddetail=await CityModel.findOne({cityName:cityName})
-        console.log(finddetail)
+        
         if(finddetail){
             return res.status(300).send({code:"300",msg:"city name should be unique"})
         }
